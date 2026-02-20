@@ -1,0 +1,62 @@
+.sidebar {
+  width: 260px;
+  background: var(--sidebar-bg);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid var(--border-color);
+  height: calc(100vh - 64px);
+  padding: 0 0 24px 0;
+  position: fixed;
+  /* background-color: rgb(240 235 235 / 36%); */
+}
+
+.dayBtn {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px 22px 16px;
+  /* border-radius: 24px; */
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #80808029;
+
+}
+
+.active {
+  background-color: transparent;
+  border-radius: 24px 0 0 24px;
+  padding-left: 30px;
+}
+
+.dayBtn:has(+ .active){
+  border-radius: 0 0 24px 0;
+}
+
+.active + .locked{
+  border-radius: 0 24px 0 0;
+  /* border-top: 2px solid #EAE7EC; */
+  /* padding-right: -30px; */
+}
+
+.locked {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.blurred {
+  filter: blur(3.5px); /* Visual requirement for locked states */
+}
+
+.indicator {
+  position: absolute;
+  left: -16px;
+  width: 4px;
+  height: 24px;
+  background: var(--text-main);
+  border-radius: 0 4px 4px 0;
+}
