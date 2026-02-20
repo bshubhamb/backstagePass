@@ -5,15 +5,15 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--bg-color);
-  color: var(--text-main);
+  background-color: var(--primaryBackgroundColor);
+  color: var(--primaryFontColor);
   transition: background-color 0.3s ease;
 }
 
 .mainLayout {
   display: flex;
   flex: 1;
-  background-color: rgb(240 235 235 / 36%);
+  background-color: var(--primaryBackgroundColor)
   overflow: hidden;
 }
 

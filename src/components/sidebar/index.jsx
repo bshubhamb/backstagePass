@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./sidebar.module.css";
 
 const Sidebar = ({ activeDay, setActiveDay }) => {
-  const days = Array.from({ length: 11 }, (_, i) => ({
+  const days = Array.from({ length: 20 }, (_, i) => ({
     id: i,
     isLocked: i > 1, // Days 2-9 are locked
   }));
@@ -14,7 +14,7 @@ const Sidebar = ({ activeDay, setActiveDay }) => {
           key={day.id}
           className={`${styles.dayBtn} ${
             activeDay === day.id ? styles.active : ""
-          } ${day.isLocked ? styles.locked : ""}`}
+          } ${day.isLocked ? styles.locked : ""} ${i === 0 ? styles.blurred : ""}`}
           onClick={() => !day.isLocked && setActiveDay(day.id)}
         >
           {i > 0 && i < 10 ? (

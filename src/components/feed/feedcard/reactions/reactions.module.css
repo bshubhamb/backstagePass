@@ -21,7 +21,7 @@
     width: fit-content;
     height: 32px;
     padding: 1px 12px;
-    background-color: #30004010;
+    background-color: var(--secondaryBackgroundColor);
     border-radius: 9999px;
 }
 
@@ -29,7 +29,7 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #30004010;
+    background-color: var(--secondaryBackgroundColor);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,6 +38,6 @@
 
 .commentCount{
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--secondaryFontColor);
 }
 

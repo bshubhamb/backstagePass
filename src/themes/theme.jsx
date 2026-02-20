@@ -1,21 +1,12 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import lightTheme from "./lightTheme";
 import darkTheme from "./darkTheme";
+import { ThemeContext } from "./ThemeContext";
 
 export const themes = {
   light: lightTheme,
   dark: darkTheme,
 };
-
-
-export const ThemeContext = createContext(null);
-
-
-export function useTheme() {
-  const ctx = useContext(ThemeContext);
-  if (!ctx) throw new Error("useTheme must be used inside ThemeProvider");
-  return ctx;
-}
 
 
 export default function ThemeProvider({ children }) {
@@ -26,10 +17,6 @@ export default function ThemeProvider({ children }) {
     const setTheme = (name) => {
         setThemeName(name);
     }
-
-    useEffect(() => {
-        document.documentElement.setAttribute("data-theme", themeName);
-    }, [themeName]);
 
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>

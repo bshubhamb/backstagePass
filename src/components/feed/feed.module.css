@@ -1,9 +1,9 @@
 .container{
     /* width: 80vw; */
-    border: 1px solid #14003527;
+    border: 1px solid var(--primaryBorderColor);
     border-radius: 24px;
     /* background: red; */
     padding: 16px 12px 12px 12px;
     margin-top: 24px;
-    background-color: #fff;
+    background-color: var(--cardBackgroundColor);
 }

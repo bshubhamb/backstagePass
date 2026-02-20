@@ -5,7 +5,7 @@ import Header from "./components/header";
 import Sidebar from "./components/sidebar";
 import SubmissionCard from "./components/submissionCard";
 import Feed from "./components/feed";
-import { useTheme } from "../theme/ThemeContext";
+import { useTheme } from "./themes/ThemeContext";
 
 import { FEED_DATA } from "./constants/mockData";
 
@@ -22,12 +22,12 @@ function App() {
     setTheme(theme.name === "light" ? "dark" : "light");
   };
 
-  console.log(FEED_DATA, "LLLLLLLLLLLLL");
+  console.log(FEED_DATA, "LLLLLLLLLLLLL", theme);
 
   const userName = FEED_DATA[Math.floor(Math.random() * 1000)]?.userName || "Anonymous";
 
   return (
-    <div className={"appWrapper"}>
+    <div className={"appWrapper"} style={{...theme.colors}}>
       <Header theme={theme} toggleTheme={toggleTheme} />
       <div className={"mainLayout"}>
         <Sidebar activeDay={activeDay} setActiveDay={setActiveDay} />

@@ -1,5 +1,5 @@
 .card {
-  background: var(--card-bg);
+  background: var(--cardBackground);
   border: 1px solid #EAE7EC;
   border-radius: 24px;
   /* width: 100%; */
@@ -7,10 +7,11 @@
   overflow: hidden; /* Ensures confetti header stays within rounded corners */
   padding: 10px;
   margin: 40px 0;
+  color: var(--primaryFontColor);
 }
 
 .pinned{
-  border-bottom: 2px solid #EAE7EC;
+  border-bottom: 2px solid var(--primaryBorderColor);
   width: 100%;
   margin: 0 -10px;
   padding: 8px 10px;
@@ -46,17 +47,19 @@
 
 .timestamp {
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--secondaryFontColor);
+  opacity: 0.6;
 }
 
 .moreButton{
   font-size: 24px;
-  color: var(--text-muted);
+  color: var(--secondaryFontColor);
   cursor: pointer;
 }
 
 .content {
   padding: 0 12px 12px;
+  color: var(--primaryFontColor);;
 }
 
 .imageContainer {

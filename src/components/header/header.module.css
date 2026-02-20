@@ -1,9 +1,10 @@
 .mainHeader {
-  background: #fff;
-  border-bottom: 1px solid var(--border-color);
+  background: var(--primaryBackgroundColor);
+  /* border-bottom: 1px solid var(--primaryBorderColor); */
   position: sticky;
   top: 0;
   z-index: 1000;
+  color: var(--primaryFontColor);
 }
 
 .top{
@@ -12,7 +13,7 @@
   align-items: center;
   padding: 0 24px;
   height: 64px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--primaryBorderColor);
 }
 .bottom{
   display: flex;
@@ -33,7 +34,7 @@
 
 .left span:first-child{
   padding-right: 20px;
-  border-right: 1px solid black;
+  border-right: 1px solid var(--primaryBorderColor);
   margin-left: 20px;
 }
 
@@ -59,8 +60,8 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 69, 0, 0.1);
-  color: #ff4500;
+  background: var(--secondaryBackgroundColor);
+  color: var(--primaryFontColor);
   padding: 6px 12px;
   border-radius: 20px;
   font-weight: 600;
